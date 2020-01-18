@@ -1,3 +1,10 @@
+
+
+//gitint - initialize github directory
+//
+
+
+
 // https://github.com/louischatriot/nedb
 //first we used npm init
 // secondly we used npm install express
@@ -8,11 +15,17 @@ const express = require('express');
 const DataStore = require('nedb');
 const app = express();
 const fetch = require('node-fetch');
-app.listen(3000, ()=> console.log('listening at 3000'));
+
+const port = process.env.PORT || 3000;
+
+app.listen(port,  ()=> {
+  console.log(`Starting Server at ${port}`)
+});
 app.use(express.static('public')); //public is the directory name
 app.use(express.json({limit:'1mb'}));
 require('dotenv').config();
 
+//Loging in server enviorment variables
 console.log(process.env);
 
 
