@@ -1,7 +1,10 @@
 
-
-//gitint - initialize github directory
 //
+//gitint - initialize github directory
+// git add .
+// git commit -m "comments"
+// git push origin master
+// git push heroku master // when pushing to heroku unhide .env file on .gitignore
 
 
 
